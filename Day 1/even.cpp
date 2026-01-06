@@ -1,3 +1,4 @@
+//ODD AND EVEN CHECK 
 #include<iostream>
 using namespace std;
 
@@ -8,3 +9,4 @@ int main(){
     }
     else "odd";
 }
+
