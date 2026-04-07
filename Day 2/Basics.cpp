@@ -1,22 +1,124 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int dectobin(int n){
+// int dectobin(int n){
 
-    int binary = 0;
-    int i = 0;
-    while(n > 0){
-        int bit = n%2;
-        // cout<<bit<<endl;
-        binary = bit * (int)pow(10 , i) + binary;
-        n = n/2;
-        i++;
+//     int ans = 0;
+//     int i = 0;
+//     while(n > 0){
+//         // int bit = n%2;  //modulus method 
+//         int bit = n & 1;  //bitwise method
+//         // cout<<bit<<endl;
+//         ans = bit * (int)pow(10 , i) + ans;
+        //    n = n/2;
+//         n = n >> 1;
+//         i++;
+//     }
+//     return ans;
+// }
+
+// int bintodec(int n){
+//     int decimal = 0;
+//     int i = 0;
+//     while (n){
+//         int bit = n%10;
+//         decimal = decimal + bit * pow(2 , i);
+//         n = n/10;
+//         i++;
+//     }  
+
+//     return decimal;
+// }
+
+// int sum(int a , int b){
+//     return a+b;
+// }
+
+// void printMyname(){   //void dont return anything 
+//     cout<<"sahil";
+// }
+
+// void printMyage();    //function is declare and define after the main function 
+
+// int get_multipli(int x , int y , int z){
+//     return x*y*z;
+// }
+
+// void printMultiples(int n){
+//     for(int i = 0 ; i<=10 ; i++){
+//         cout<<(n*i)<<endl;
+//     }
+// }
+
+// int  voting_criteria(int age);
+
+// void printArray(int arr[] , int size){
+//     for(int i = 0 ; i<=size-1 ; i++ ){
+//         cout<<arr[i]<<endl;
+//     }
+// }
+
+// void reversearray(int arr[] , int size){
+//     int start = 0 ; int end = size -1;
+
+//     while(start < end){
+//         swap(arr[start] , arr[end]);
+//         start ++;
+//         end --;
+//     }
+// }
+
+// void flipp(int arr[] , int size){
+//     for(int i = 0 ; i<size ; i++){
+//         if(arr[i] == 0){
+//             arr[i] = 1;
+//         }
+//         else if(arr[i] == 1){
+//             arr[i] = 0;
+//         }
+//     }
+// }
+
+void twodarray(int arr[][3] , int row , int col){
+    cout<<"print the 2d array values : "<<endl;
+    for(int i = 0 ; i<row ; i++){
+        for(int j = 0 ; j<col ; j++){
+            cout<<arr[i][j]<<" ";
+        }
     }
-    return binary;
 }
 
+
+
 int main(){
+
+    
+int arr[2][3];
+int row = 2;
+int col = 3;
+
+
+
+for(int i = 0 ; i<row ; i++){
+    for(int j = 0 ; j<col ; j++){
+        cout<<"Input of 2d values ";
+        cin>>arr[i][j];
+    }
+}
+
+twodarray(arr , row , col);
    
+    
+
+    // int arr[] ={10 , 20 , 30 , 40 , 50};
+    // // int arr[] ={1 ,0,1,1,0};
+    // int size = 5;
+    // // flipp(arr , size);
+    // reversearray(arr , size);
+    // for(int i = 0; i < size; i++) {
+    //     cout << arr[i] << " ";
+    // }
+
     // int age ; 
     // cout<<"enter ur age" <<endl;
     // cin>>age ;
@@ -160,11 +262,146 @@ int main(){
 
     //typecasting in c++
 
-    int n ;
-    cout<<"enter n"<<endl; 
-    cin>>n ;
+    //dectobin
+    // int n ;
+    // cout<<"enter n"<<endl; 
+    // cin>>n ;
     
-    cout<<dectobin(n);
+    // cout<<dectobin(n);
+
+    //bintodec
+    // int binary;
+    // cout<<"enter the binary number ";
+    // cin>>binary;
+    // cout<<bintodec(binary)<<endl;
+
+    //implicit typecasting -- self by compiler give preference to larger datatype 
+    // char ch = 'a';
+    // int b = ch + 2;
+    // cout<<b<<endl;
+
+    //explicit typecasting -- we have to do by manually by putting the datatype in front of given value
+    // char ch = 'a';
+    // int b = ch + 2;
+    // cout<<(char)b;
+
+    // FUNCTIONS IN C++ 
+// return type -- void , non-void(int , char , float , double)
+
+// int ans = sum(4,5);
+// cout<<"the sum of given number is : "<<ans;
+
+// printMyname(); 
+
+//IN FUNCTION REMEMBER ONE THING -- 
+//make sure before calling the main function u should declare it not define because u can define it later also after the main function 
+//eg. in below -- 
+
+// printMyage();      //call the function in the main function 
+
+// cout<<get_multipli(3,3,3);
+
+// printMultiples(7);
+ 
+// int age ;
+// cout<<"enter ur age";
+// cin >> age ;
+// cout<< voting_criteria(age);
+
+//ARRAYS IN C++ -- 
+
+// int arr[5] ={10,20,30,40,50};
+// cout<<arr[1];
+
+// vector<int> arr ={10,20,30,40,50};
+// for(int i = 0 ; i<5; i++){
+//     cout<<arr[i]<<" ";
+// }
+// for(int i = 0 ; i<arr.size(); i++){  //this is for the vectory of array 
+//     cout<<arr[i]<<" ";
+// }
+
+// int arr[7];
+
+// for(int i = 0 ; i<7 ; i++){
+//     cout<<"enter the value of array : " <<endl;
+//     cin >> arr[i];
+// }
+
+// for(int i = 0 ; i <7 ; i++){
+//     cout<<arr[i]<<endl;
+// }
+
+
+// int arr[5] ={10,20,30,40,50};
+
+// int sum = 0 ;
+// for(int i = 0 ; i<5; i++){
+//      sum = sum + arr[i];
+// }
+
+// ARRAY WITH FUNCTIONS --  
+// int arr[] = {10,20,30,40};
+// int size = 4;
+// printArray(arr , size);
+
+
+//2D ARRAYS IN C++ == 
+
+
+// int arr[2][3] = {{1,2,3},
+//               {8,7,6}
+// };
+
+// int row = 2;
+// int col = 3;
+// // cout<<arr[0][2];
+
+// for(int i = 0 ; i<row ; i++){    
+//     for(int j = 0 ; j<col ; j++){
+//         cout<<arr[i][j]<<"  ";
+//     }
+// }
+
+// int arr[2][3];
+// int row = 2;
+// int col = 3;
+
+// for(int i = 0 ; i<row ; i++){
+//      for(int j = 0 ; j<col ; j++){
+//         cout<<"enter the values in 2d arrays ";
+//         cin>>arr[i][j];
+//      }
+// }
+
+
+// for(int i = 0 ; i<row ; i++){
+//      for(int j = 0 ; j<col ; j++){
+//         cout<<arr[i][j]<<" ";
+//      }
+// }
+
+
+
 
 
 }
+
+
+
+
+
+
+// void printMyage(){                //function define not declare after the main function 
+//     cout<<"my age is 22";
+// }
+
+
+// int voting_criteria(int age){
+// if(age > 18){
+//     cout<<"you can vote";
+// }
+// else{
+//     cout<<"you can't vote";
+// }
+// }
