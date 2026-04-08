@@ -79,34 +79,177 @@ using namespace std;
 //     }
 // }
 
-void twodarray(int arr[][3] , int row , int col){
-    cout<<"print the 2d array values : "<<endl;
-    for(int i = 0 ; i<row ; i++){
-        for(int j = 0 ; j<col ; j++){
-            cout<<arr[i][j]<<" ";
-        }
-    }
+// void twodarray(int arr[][3] , int row , int col){   // note : IN FUNCTION REMEMBER WHEN INITIALISE ARRAY IN COLUMN WE HAVE TO GIVE COLUMN VALUE 
+//     cout<<"print the 2d array values : "<<endl;
+//     for(int i = 0 ; i<row ; i++){
+//         for(int j = 0 ; j<col ; j++){
+//             cout<<arr[i][j]<<" ";
+//         }
+//     }
+// }
+
+// int getlength(char ch[]){
+//     int count = 0;
+//     int index = 0 ;
+//     while(ch[index] != '\0'){
+//         count++;
+//         index ++;
+//     }
+//     return count;
+// }
+
+
+void reversestring(string str){
+    reverse(str.begin() , str.end());
+    cout<<"the reverse of the given string is : "<<str;
 }
 
+void pallindrome(string str){
 
+  string temp = str;
+  reverse(temp.begin() , temp.end());
+
+  if(temp == str){
+    cout<<"it is pallindrome";
+  }else{
+    cout<<"not";
+  }
+
+}
+
+// void update(int a){  //PASS BY VALUE  IT MAKE A DIFFERENT COPY AND DO EDIT IN IT
+//    a++;
+//    cout<<a<<endl;
+// }
+
+// void update(int &a){  //PASS BY REFERNCE -- IT MEANS A have second name -- IT EDIT IN SAME COPY
+//    a++;
+//    cout<<a<<endl;
+// }
+
+void solve(int arr[]){  //but here it print 4 because it acts a pointer not an array like u can also write int *arr
+    cout<<sizeof(arr);
+}
 
 int main(){
 
+
+    //NOTE: A PROGRAM HAVE SHORT STACK SPACE COMPARED TO HEAP MEMORY 
+    //IF U WANT MEMORY FROM HEAP the like in int it allocates u 4byte for int 
+    //for this block of memory it gave u address
+//so to store this address we used pointer like
+//this pointer *ptr is lies in the stack and pointing the address for memory allocate in the heap
+
+// //BASICALLY MEMORY ALLOCATE USING NEW KEYWORD;
+//  int *ptr = new int ;
+//  cout<<*ptr<<endl;
+
+//  //Now u dont have need for this memory then use DELETE keyword
+
+// delete ptr;
+ 
+//Array creation using dynamic memory -- 
+// int *ptr = new int[5];
+// ptr[0] = 10;
+// ptr[1] = 20;
+// ptr[2] = 30;
+// *(ptr + 3) = 40;
+// *(ptr + 4) = 50;
+
+// for(int i = 0 ; i<5 ; i++){
+//     cout<<ptr[i]<<" ";
+// }
+
+// //to delete this array memory location -- 
+// delete []ptr;
+
+
+//NOTE : --
+//int arr[n] -- this is a bad way to initialize an array because it takes stack memory because each program takes limited stack memory and its a bad way to create an array
+//but u can initialize array like this it takes heap memory -- 
+
+    // int arr[] ={1,2,3,4}; //here it print 16 bytes
+    // cout<<"the address is : " <<sizeof(arr)<<endl;
+    // solve(arr);
     
-int arr[2][3];
-int row = 2;
-int col = 3;
+
+
+    //POINTERS -- 
+
+    //& -- it represent the address 
+    //* -- dereference operator -- it value present at given address
+
+    // int num = 10;
+    // int *ptr = &num;
+
+    // cout<<num<<endl;
+    // cout<<&num<<endl;
+    // cout<<ptr<<endl;
+    // cout<<&ptr<<endl;
+    // cout<<*ptr<<endl;
+
+    // *ptr ++;
+    // cout<<num;
+    //note: basically we can indirectly access a number using pointer. but REFERNCES are safer than pointer.
+    //COUNT EVEN NUMBER IN AN ARRAY -- 
+
+    // vector<int> arr = {1,2,3,4,6,8};
+    // int count = 0 ;
+    
+    // for(int i = 0 ; i<arr.size() ; i++){
+    //     if(arr[i] %2 == 0){
+    //         count ++;
+    //     }
+    // }
+    // cout<<"the total no. of even present in this array are :"<<count;
+
+    // int a = 22;
+    // update(a);
+    // cout<<"the value of a is : "<<a<<endl;
+
+    //REFERENCE VARIABLE
+    // int a = 5;
+    // int &temp = a;
+
+    // // cout<<temp;
+    // temp+= 5;
+    // cout<<temp;
+    
+    // string str = "mama";
+    // pallindrome(str);
+
+    // string str = "sahil";
+    // reversestring(str);
+
+    // char ch[] = "sahil khan";
+    // // cout<<getlength(ch);
+    // // cout<<"lenght of character is : "<<strlen(ch);
+
+    // char ch2[] = "hitesh";
+    // strcpy(ch2 , ch);
+    // // cout<<ch2;
+
+    // if(strcmp(ch2 , ch) == 1){
+    //   cout<<"both are same";
+    // }else{
+    //     cout<<"both are not same";
+    // }
+    
+     
+// int arr[2][3];
+// int row = 2;
+// int col = 3;
 
 
 
-for(int i = 0 ; i<row ; i++){
-    for(int j = 0 ; j<col ; j++){
-        cout<<"Input of 2d values ";
-        cin>>arr[i][j];
-    }
-}
+// for(int i = 0 ; i<row ; i++){
+//     for(int j = 0 ; j<col ; j++){
+//         cout<<"Input of 2d values ";
+//         cin>>arr[i][j];
+//     }
+// }
 
-twodarray(arr , row , col);
+// twodarray(arr , row , col);
    
     
 
@@ -381,8 +524,65 @@ twodarray(arr , row , col);
 //      }
 // }
 
+//CHARACTER ARRAYS IN C++ 
+//NOTE : in this we have to take the responsibility of termination character 
+
+//upper to lowercase , lowercase to uppercase
+//ch - 'a' + 'A'  -- lower to upper 
+//ch -'A' + 'a' -- upper to lower
+
+// char ch[6] = "sahil";
+// cout<<ch[2];
+
+// int arr[4] = {1,2,3,4};
+// cout<<arr<<endl;
+
+// char brr[5] = "sahi";
+// cout<<brr<<endl;  -- 
+
+// for(int i = 0 ; i<6 ; i++){
+//     cout<<ch[i]<<" ";
+// }
+
+// string name ;
+// name.push_back('s');
+// name.push_back('a');
+// name.push_back('h');
+// name.push_back('i');
+// name.push_back('l');
+// cout<<name<<endl; 
 
 
+// char ch[100];
+// ch[0]= 's';
+// ch[1] = 'o';
+// ch[2] = 'n';
+// ch[3] = 'u';
+// cout<<ch;
+
+
+//functions in string -- 
+
+// string str = "sahi";
+// // cout<<"length of str is : "<<str.length()<<endl;
+
+// string temp = "khan";
+// str.append(temp);
+
+// // cout<<str;
+
+// cout<<str.substr(2,4)<<endl;
+
+
+// string a = "monu";
+// string b = "monu";
+
+// if(a.compare(b) == 0){ //0 means they are same and 1 means they are different 
+//     cout<<"both strings are same";
+// }
+// else{
+//     cout<<"both are different strings";
+// }
 
 
 }
