@@ -23,6 +23,14 @@ public:
         *cgpaPtr = *obj.cgpaPtr;
     }
 
+    //as in this program we create dynamic memory allocation so we have to deallocate the memory also using DESTRUCTOR 
+
+    ~student(){
+        cout<<"hi , I delete everything";
+        delete cgpaPtr; //this deallocate the memory --memory leak   
+    }
+
+
     void getInfo()
     {
         cout << "name is : " << name << endl;
@@ -35,14 +43,14 @@ int main()
 
     student s1("sahil", 7.9);
 
-    student s2(s1);
+    // student s2(s1);
     // s2.getInfo();
 
     s1.getInfo(); 
-    *(s2.cgpaPtr) = 9.2;
-    s1.getInfo();
+    // *(s2.cgpaPtr) = 9.2;
+    // s1.getInfo();
 
-    s2.name = "neha";
-    s2.getInfo();  //now deep copy is working 
+    // s2.name = "neha";
+    // s2.getInfo();  //now deep copy is working 
     return 0;
 }
