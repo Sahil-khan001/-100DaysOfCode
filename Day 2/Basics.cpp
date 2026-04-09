@@ -145,7 +145,6 @@ int main(){
 //  cout<<*ptr<<endl;
 
 //  //Now u dont have need for this memory then use DELETE keyword
-
 // delete ptr;
  
 //Array creation using dynamic memory -- 
