@@ -159,7 +159,7 @@ int main(){
 //     cout<<ptr[i]<<" ";
 // }
 
-// //to delete this array memory location -- 
+// //to delete this  dynamic array memory location -- 
 // delete []ptr;
 
 
@@ -391,7 +391,7 @@ int main(){
     // cout<<(4 << 2)<<endl;  // 4 * 2^2
     // cout<<(4 >> 2);        // 4 / 2^2
 
-    //xor  1^1 -- 0 , 1^0 -- 1  , 0^0 -- 1 , 0^1 -- 1;
+    //xor  1^1 -- 0 , 1^0 -- 1  , 0^0 -- 0, 0^1 -- 1;
 
     // cout<<(1^1)<<endl;
     // cout<<(0^1)<<endl;
@@ -427,12 +427,7 @@ int main(){
     // int b = ch + 2;
     // cout<<(char)b;
 
-    // FUNCTIONS IN C++ 
-// return type -- void , non-void(int , char , float , double)
-
-// int ans = sum(4,5);
-// cout<<"the sum of given number is : "<<ans;
-
+    
 // printMyname(); 
 
 //IN FUNCTION REMEMBER ONE THING -- 

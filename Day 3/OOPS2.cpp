@@ -27,7 +27,7 @@ public:
 
     ~student(){
         cout<<"hi , I delete everything";
-        delete cgpaPtr; //this deallocate the memory --memory leak   
+        delete cgpaPtr; //this deallocate the dynamic memory --memory leak   
     }
 
 

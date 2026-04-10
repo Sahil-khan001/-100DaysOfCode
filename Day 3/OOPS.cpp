@@ -48,6 +48,8 @@ teacher(teacher &orgObj){  //pass by reference it means this is original object 
     this->salary = orgObj.salary;
 }
 
+     //functions
+
    void changeDept(string newDept){
     dept = newDept;
    }
@@ -77,7 +79,7 @@ int main(){
     // // t1.sub = "physics";
     // // t1.setSalary(50000);
 
-    // cout<<t1.dept<<endl;  //we print the value of department without giving value in the object but because of constructor 
+    // cout<<t1.dept<<endl;  //we print the value of department without giving value in the object but because of non parameterized constructor 
 
     // cout<<t1.name<<" "<<t1.sub<<endl;
     // cout<<t1.getSalary()<<endl; 
@@ -90,7 +92,7 @@ int main(){
 
     // // t1.getInfo();
 
-    // teacher t2(t1); //this is default copy constructor it copy the properties of object t1 without write parameterized constructor
+    // teacher t2(t1); //this is default copy constructor it copy the properties of object t1 without write copy parameterized constructor
     // t2.getInfo();
 
     teacher t2(t1); //this is custom copy constructor it copy the properties of object t1 without write parameterized constructor
