@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+//in this we talk about copy constructor in heap memory and it run is deep copy not shallow copy
+
 class student
 {
 

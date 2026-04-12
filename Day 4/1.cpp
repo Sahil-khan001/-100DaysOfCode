@@ -3,7 +3,7 @@ using namespace std;
 
 
 //THIS IS MULTILEVEL INHERITANCE AND ITS EXAMPLE --
-//when one class 3 is inherited from class 2 and class 1 is inherited from class2
+//when one class 3 is inherited from class 2 is inherited from class1
 
 class person{
     public:

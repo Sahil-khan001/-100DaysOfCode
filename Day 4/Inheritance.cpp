@@ -23,7 +23,7 @@ class person{
 
 };
 
-class student : private person{  //if u write private here then u can acess these value in main functions
+class student : private person{  //if u write private here then u can't acess these value in main functions
 
     public:
     int rollno;
@@ -63,7 +63,7 @@ int main(){
     student s1("sahil" , 23 , 532);
     // s1.getInfo();
 
-    //private inheritance not allowed
+    //private inheritance not allowed means when u write this syntax : private the class name from which u derived 
     // cout<<s1.age;
 
 
