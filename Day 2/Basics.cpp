@@ -140,7 +140,7 @@ int main(){
 //so to store this address we used pointer like
 //this pointer *ptr is lies in the stack and pointing the address for memory allocate in the heap
 
-// //BASICALLY MEMORY ALLOCATE USING NEW KEYWORD;
+// //BASICALLY  DYNAMICALLY MEMORY ALLOCATE USING NEW KEYWORD;
 //  int *ptr = new int ;
 //  cout<<*ptr<<endl;
 
@@ -176,7 +176,7 @@ int main(){
     //POINTERS -- 
 
     //& -- it represent the address 
-    //* -- dereference operator -- it value present at given address
+    //* -- dereference operator -- value present at given address
 
     // int num = 10;
     // int *ptr = &num;

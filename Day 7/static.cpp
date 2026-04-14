@@ -2,7 +2,7 @@
 using namespace std;
 
 void fun(){    //in callstack what happened we call function it give value to variable then delete then another function call and everytime value of x is 0 but if we use static then in callstack only function is there but the x is on other side means it gonna update also +1 , +1 , +1 
-   static int x = 0;   //means this initialisation run only one time and other code run again and again  
+   static int x = 0;   //means this initialisation of x run only one time and other code run again and again  
     cout<<"x is : "<<x<<endl;
     x++;
 }
