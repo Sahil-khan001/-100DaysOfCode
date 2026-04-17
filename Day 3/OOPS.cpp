@@ -24,7 +24,7 @@ class teacher {
 //     dept = d;
 //     subject = s;
 //     salary = sal;
-//    }
+//    }j
 
 
    //parameterized constructor using this keyword

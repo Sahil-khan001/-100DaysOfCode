@@ -49,6 +49,10 @@ int y = x;
 so y = 20 ; .. so this equals to act as a overloading by creating a copy into y variable so this is operator overloading...
 this is example of compile time polymorhism 
 
+Compile Time Polymorphism -- 1. Constructor overlaoding 
+                             2. Function overloading
+                             3. Operator Overloading 
+
 next we have -- RUN TIME POLYMORHISM 
 example of this is -- function overriding -- whenever it is here it means when parents and child both contain the same functions but have different implementation 
 the parent class function said to be overridden
@@ -71,6 +75,9 @@ some properties of virtual functions are --
 -- virtual functions are dynamic in nature 
 -- defined by the keyword 'virtual' in the base class and it is declared in the base class and overridden in the child class
 -- it is called during runtime 
+
+runtime polymorphism -- function overridden 
+                       virtual functions with overriden
    */
 
 

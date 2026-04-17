@@ -32,6 +32,6 @@ void hello(){
     // is an example of function overriding during runtime polymorhism
 
     child c2;
-    c2.hello(); //this is virtual functions ir pri
+    c2.hello(); //this is virtual functions that is child one and it overridden the parent one 
     return 0;
  }

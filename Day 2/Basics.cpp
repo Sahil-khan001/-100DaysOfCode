@@ -65,7 +65,7 @@ using namespace std;
 //         swap(arr[start] , arr[end]);
 //         start ++;
 //         end --;
-//     }
+//     } 
 // }
 
 // void flipp(int arr[] , int size){
@@ -164,7 +164,7 @@ int main(){
 
 
 //NOTE : --
-//int arr[n] -- this is a bad way to initialize an array because it takes stack memory because each program takes limited stack memory and its a bad way to create an array
+//int arr[n] -- this is a bad way to initialize an array because it takes stack memory because each program takes limited stack memory and long heap memory and its a bad way to create an array
 //but u can initialize array like this it takes heap memory -- 
 
     // int arr[] ={1,2,3,4}; //here it print 16 bytes
